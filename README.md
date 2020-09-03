@@ -23,6 +23,19 @@ The Meraki controller example is based on the always-on Meraki lab, but it can a
 
 ![Meraki_Lab](/images/Meraki_Lab.png)
 
-Meraki Dashboard API Reference: https://documentation.meraki.com/zGeneral_Administration/Other_Topics/The_Cisco_Meraki_Dashboard_API
+[Meraki Dashboard API Reference](https://documentation.meraki.com/zGeneral_Administration/Other_Topics/The_Cisco_Meraki_Dashboard_API)
+
+Steps: 
+
+1. Select Organization and network. 
+2. Enable API access. 
+3. Generate API key. 
+4. Use the API key to retrieve organization ID. 
+5. Use API endpoint to retrieve information, for example, a list of inventories. 
+
+- Click image below for YouTube video
+
+[![Meraki Video Demo](/images/Meraki_Video.jpg)](https://youtu.be/_GLoWyHFTnE)
+
 
 
