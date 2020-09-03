@@ -13,6 +13,28 @@ The NX-oS Device API Example is done with the Multi-IOS Cisco Test Network Sandb
 
 ![Multi-IOS-Test-Network](/images/Multi-IOS-Test-Network.png)
 
+```
+(venv) [developer@devbox user]$ssh cisco@172.16.30.58
+Warning: Permanently added '172.16.30.58' (RSA) to the list of known hosts.
+User Access Verification
+Password:
+
+Cisco NX-OS Software
+Copyright (c) 2002-2018, Cisco Systems, Inc. All rights reserved.
+Nexus 9000v software ("Nexus 9000v Software") and related documentation,
+
+dist4# confi t
+Enter configuration commands, one per line. End with CNTL/Z.
+dist4(config)# feature nxapi
+dist4(config)# nxapi http port 80
+dist4(config)# end
+dist4# copy run start
+[########################################] 100%
+Copy complete, now saving to disk (please wait)...
+Copy complete.
+dist4#
+```
+
 ## Ansible Example
 
 The Ansible example is based on the same remote lab. 
@@ -35,7 +57,7 @@ Steps:
 
 - Click image below for YouTube video
 
-[![Meraki Video Demo](/images/Meraki_Video.jpg)](https://youtu.be/_GLoWyHFTnE)
+[![Meraki Video Demo](/images/Meraki_Video.png)](https://youtu.be/_GLoWyHFTnE)
 
 
 
