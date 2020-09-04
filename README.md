@@ -13,6 +13,8 @@ The NX-oS Device API Example is done with the Multi-IOS Cisco Test Network Sandb
 
 ![Multi-IOS-Test-Network](/images/Multi-IOS-Test-Network.png)
 
+- Pick a NX-OS device (such as dist4) and enable NXAPI feature: 
+
 ```
 (venv) [developer@devbox user]$ssh cisco@172.16.30.58
 Warning: Permanently added '172.16.30.58' (RSA) to the list of known hosts.
@@ -35,9 +37,51 @@ Copy complete.
 dist4#
 ```
 
+- Click image below for YouTube video
+
+[![NXAPI Video Demo](/images/NXAPI_Video.png)](https://youtu.be/N1ALXW42Wzs)
+
 ## Ansible Example
 
-The Ansible example is based on the same remote lab. 
+The Ansible example is based on the same remote lab and device. 
+
+```
+(venv) [developer@devbox user]$cat ansible.cfg
+[defaults]
+host_key_checking = false
+
+(venv) [developer@devbox user]$cat hosts
+[nexus-devices]
+nxosv-1
+
+(venv) [developer@devbox user]$cat host_vars/nxosv-1
+---
+ansible_host: 172.16.30.58
+ansible_user: cisco
+ansible_ssh_pass: cisco
+ansible_connection: network_cli
+ansible_network_os: nxos
+ansbile_become: yes
+ansible_become_method: enable
+ansible_become_pass: cisco
+
+(venv) [developer@devbox user]$cat my_playbook.yaml
+---
+- name: My Test Playbook
+  connection: network_cli
+  gather_facts: false
+  hosts: all
+  tasks:
+    - name: backup
+      nxos_config:
+        backup: yes
+      register: backup_nxos_location
+      when: ansible_network_os == 'nxos'
+```
+
+- Click image below for YouTube video
+
+[![Ansible Video Demo](/images/Ansible_Video.png)](https://youtu.be/FD3kU9eZiOM)
 
 ## Meraki Controller Example
 
