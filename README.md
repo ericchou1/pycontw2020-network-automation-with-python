@@ -1,5 +1,7 @@
 # PyCon TW 2020 Talk: Network Automation with Python Supplements
 
+### Slides avialable on [Speaker Deck](https://speakerdeck.com/ericchou/network-automation-with-python)
+
 This repository provides demonstration supplement to the PyCon TW 2020 talk: Network Automation with Python. 
 https://tw.pycon.org/2020/en-us/conference/talk/1153041030333858139/
 
